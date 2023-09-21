@@ -5,38 +5,41 @@
 }
 
 body {
-    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 120px;
+    flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     background-color: black;
 }
 
 
-
 button {
-    position: absolute;
-    width: 150px;
-    height: 80px;
-    border-radius: 25px;
-    border: 5px solid rgb(72, 179, 72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10em auto;
+    max-width: 10em;
+    width: 100%; 
+    aspect-ratio: 150 / 80; 
+    border-radius: 2.5em;
+    border: 0.5em solid rgb(72, 179, 72);
     color: black;
     background-color: rgb(234, 236, 120);
-    transition: background-color .3s;
-    transition: border .3s;
+    transition: background-color .3s ease, border 1s ease-in; 
 }
 
 button:hover {
     background-color: rgb(72, 179, 72);
-    border: 5px solid rgb(234, 236, 120);
+    border: .5em solid rgb(234, 236, 120);
 }
 
 img {
-    position: absolute;
-    margin:0 auto;
-    display:block;
-    margin-top: 200px;
-    margin-left: 100px auto;
-    height: 600px;
-    width: 600px;
+    display: flex;
+    justify-content: center;
+    margin: 10em auto;
+    aspect-ratio: 1 / 1; 
+    max-width: 600px;
+    width: 100%; 
+    object-fit: cover; 
+    object-position: center;
 }

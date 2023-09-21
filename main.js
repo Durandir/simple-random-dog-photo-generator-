@@ -1,13 +1,12 @@
-const btn = document.querySelector('button')
-const img = document.querySelector('img')
-const URL = 'https://dog.ceo/api/breeds/image/random'
+const btn = document.querySelector('#btn') 
+const img = document.querySelector('#image')
+const url = 'https://dog.ceo/api/breeds/image/random' 
 
 
 btn.addEventListener('click', () => {
-	fetch(URL)
-	.then(respo => respo.json())
+	fetch(url)
+	.then(response => response.json())
 	.then(info => img.setAttribute('src', info.message))
-	.catch(redAlert => console.error(redAlert))
+	.catch(error => console.error(error)) 
 })
 
-	
